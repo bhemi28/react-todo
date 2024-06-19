@@ -5,12 +5,13 @@ const TodoCard = (props) => {
 
   return (
     <>
-      <li className="flex justify-between font-semibold my-3 px-12 py-3 text-xl border-2 rounded-md ">
-        {children}
-        <section id="edit-todo" className="flex gap-8 text-2xl text-zinc-900">
+      <li className="flex justify-between font-semibold my-3 sm:px-12 sm:py-3 px-4 py-1  border-2 rounded-md ">
+        <h2 className="  w-9/12 text-wrap break-words sm:text-xl text-base">{children}</h2>
+        <section id="edit-todo" className="flex sm:gap-8  gap-4 sm:text-2xl text-lg text-zinc-900">
           <button
             onClick={() => {
               handleEditTodo(todoIndex);
+              console.log(children);
             }}
           >
             <i className="fa-solid fa-pen-to-square"></i>
